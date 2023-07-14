@@ -22,8 +22,7 @@ app.post('/totp-generate', (request, response, next) => {
          encoding: 'base32',
          step: STEP, 
          window: WINDOW 
-      }),
-      remaining: (30 - Math.floor((new Date().getTime() / 1000.0 % 30)))
+      })
    })
 })
 
